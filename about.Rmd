@@ -5,13 +5,54 @@ output:
     toc: true
     toc_float: true
 ---
-### About me
+## About me
+Xuanhe CHEN
+xc2610@cumc.columbia.edu
+
+### Education:
+BA at Grinnell College, IA, US. 2017-2021
+
+First Major: Biological Chemistry
+
+Second Major: Computer Science
+
+
+MS at Columbia University, NY, US. 2021-present
+
+Major: Biological Statistics
+
+### Core Courseworks:  
+General Chemistry; Organic Chemistry; Molecules, Cells, & Organism; Intro Biological Chemistry; Physical Chemistry; 
+
+Functional Problem Solving; Imperative Problem Solving; Object Oriented Problem Solving, Data Structure; Analysis of Algorithms; Computer Organization/Architecture; Software Design; General Physics; 
+
+Discrete Structures; Functions & Integral Calculus, Calculus; Applied Statistics; Linear Algebra; 
+
+### Research Experience:
+07/2019-08/2019     Summer research in Institute of biophysics, Chinese academy of sciences 
+
+07/2020-present     Independent reseach on AML and ALL Leukemia Classification
+
+### Skills:
+·Biological Chemistry lab related skills:
+ELISA, DNA and RNA extraction, PCR, NMR, protein purification, simple organic synthesis, bacteria incubation. 
+
+·CS skills: 
+Know how to code in C, Java, Python, Scheme and a little pureScript.
+Can build web application by Ruby on Rails. 
+
+·Statistic skills:
+Could use FineBI (a data visualization tool works for multidemension of data and required coding in Java)
+Know how to do data analysis in Minitab and other commonly used statistical analysis software. 
+
+·Other skills:
+Photo processing via Photoshop. Audio and video processing via Adobe Premiere and Adobe Audition.
 
 
 
-### About this site
+## About this site
 
-This site is crated for a Data Science course using R.
+This site is created for a Data Science course using R for now.
 
 The course link is:
 [P8105](https://www.p8105.com/)

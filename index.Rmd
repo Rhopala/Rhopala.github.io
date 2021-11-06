@@ -1,17 +1,15 @@
 ---
-title: "My awesome website"
+title: "Xuanhe Chen's personal websie (under construction)"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is Jeff's awesome website
-
-Add some text.
+## Welcome to look around although nothing much here.
 
 ![](images/bird_in_sky.JPG)
 
-## Links
+### Links
 
 * [About](about.html)
