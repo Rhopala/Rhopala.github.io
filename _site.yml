@@ -10,7 +10,7 @@ navbar:
     - icon: fa-github fa-lg
       href: http://github.com/Rhopala/
     - icon: fab fa-linkedin fa-lg
-      herf: https://www.linkedin.com/in/xuanhe-chen/
+      href: https://www.linkedin.com/in/xuanhe-chen
 output:
   html_document:
     theme: cerulean
