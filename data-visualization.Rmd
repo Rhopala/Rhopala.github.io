@@ -1,0 +1,64 @@
+---
+title: "Data Visualization Examples"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(dplyr)
+library(plotly)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+
+```{r}
+data("ny_noaa") #load data
+
+# considering the size of data, filter a subset
+ny_noaa_2010_feb = 
+  ny_noaa %>% 
+  subset(date >= "2010-02-01" & date <= "2010-2-28") %>%
+  filter(!is.na(tmax), !is.na(tmin))
+
+# convert column types
+ny_noaa_2010_feb[,6] <- lapply(ny_noaa_2010_feb[, 6], as.numeric)
+ny_noaa_2010_feb[,7] <- lapply(ny_noaa_2010_feb[, 7], as.numeric)
+ny_noaa_2010_feb[,2] <- lapply(ny_noaa_2010_feb[, 2], as.character)
+```
+
+### The Precipitation (tenths of mm) of stations in NY, Feburary 2010
+```{r}
+ny_noaa_2010_feb %>%
+  filter (!is.na(prcp)) %>%
+  plot_ly(
+    x = ~date, y = ~prcp, type = "scatter", mode = "markers",
+    color = ~prcp, text = ~date, alpha = 0.5)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### The Maximum temperature (tenths of degrees C) of stations in NY, Feburary 2010
+
+```{r}
+ny_noaa_2010_feb %>% 
+  mutate(date = fct_reorder(date, tmax)) %>% 
+  plot_ly(y = ~tmax, color = ~date, type = "box", colors = "viridis")
+```
+
+### The snowfall (mm) of stations in NY, Feburary 2010
+
+```{r}
+ny_noaa_2010_feb %>% 
+  mutate(snow = ifelse(is.na(snow), 0, snow)) %>%
+  group_by(date) %>%
+	summarise(total_snow = sum(snow)) %>%
+  plot_ly(x = ~date, y = ~total_snow, color = ~total_snow, type = "bar", colors = "viridis")
+```

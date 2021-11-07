@@ -11,5 +11,6 @@ output:
 ![](images/bird_in_sky.JPG)
 
 ### Links
-
 * [About](about.html)
+* [Data Visualization Example Plots](data-visualization.html)
+* [Check creatures I observed in Grinnell](https://safe-fjord-36087.herokuapp.com/)
